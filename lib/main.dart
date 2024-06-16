@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//statefulWidget- 상태가 있는 위젯이라고 생각하면 된다. -> 변화가 있어야 되는 것이 필요할 때
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -30,6 +31,24 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('홈'),
+      ),
+      body: Center(
+        child: Text(
+          '0',
+          style: TextStyle(
+            color: Colors.red,
+            fontSize: 70,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('클릭');
+          },
+          child: Icon(Icons.add)),
+    );
   }
 }
