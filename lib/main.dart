@@ -30,19 +30,35 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int count = 0;
+
+  get center => null;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('홈'),
       ),
+      //body에서, Center로 쌓여있는데, 왜 가운데로 오지 않았냐 -> Center는 이미 가운데로 되어 있음
+      //하지만, Center 영역안에는 Center가 안되어 있음
       body: Center(
-        child: Text(
-          '$count',
-          style: TextStyle(
-            color: Colors.red,
-            fontSize: 70,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '숫자',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 30,
+              ),
+            ),
+            Text(
+              '$count',
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 30,
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
