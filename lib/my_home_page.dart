@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-//statefulWidget- 상태가 있는 위젯이라고 생각하면 된다. -> 변화가 있어야 되는 것이 필요할 때
+//Camel Case(낙타형)
+//Snake_Case(뱀)
+//띄어쓰기는 둘다 없다.
+//변수는 항상 소문자로 시작한다.
+//build(메서드)도 소문자로 시작한다.
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
