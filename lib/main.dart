@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project/ios_style_screen.dart';
 import 'package:flutter_project/main_page.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         //useMaterial3 속성을 false로 바뀌면, 화면 theme 색상이 변경된다.
         useMaterial3: false,
       ),
-      home: const MainPage(),
+      // home: const MainPage(),
+      home: const IosStyleScreen(),
     );
   }
 }

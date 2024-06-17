@@ -8,12 +8,13 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int number = 0;
+  int number = 10;
   String _text = '';
   final _textController = TextEditingController();
 //textController를 쓰고자 한다면, @override -> dispose를 꼭 추가해줘야 된다.
   @override
   void dispose() {
+    number = 11;
     _textController.dispose();
     super.dispose();
   }
