@@ -6,12 +6,17 @@ class MainPage extends StatefulWidget {
   @override
   State<MainPage> createState() => _MainPageState();
 }
-//hot reload vs hot restart
-//hot reload: Widget build 안 쪽에서, 내용을 수정할 때, 바로바로 변경이 가능하다.
-//hot restart: 바깥에, int number 같이 변수들은 hot reload가 안됨 -> restart 버튼 클릭
 
 class _MainPageState extends State<MainPage> {
   int number = 0;
+  String _text = '';
+  final _textController = TextEditingController();
+//textController를 쓰고자 한다면, @override -> dispose를 꼭 추가해줘야 된다.
+  @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
 
   get center => null;
   @override
@@ -72,11 +77,13 @@ class _MainPageState extends State<MainPage> {
                   Expanded(
                     flex: 3,
                     child: TextField(
+                      controller: _textController,
                       decoration: InputDecoration(
                         labelText: '글자',
                         border: OutlineInputBorder(),
                       ),
                       onChanged: (text) {
+                        _text = text;
                         print(text);
                       },
                     ),
@@ -84,7 +91,10 @@ class _MainPageState extends State<MainPage> {
                   Expanded(
                       flex: 2,
                       child: ElevatedButton(
-                          onPressed: () {}, child: Text('Login'))),
+                          onPressed: () {
+                            print(_textController.text);
+                          },
+                          child: Text('Login'))),
                 ],
               ),
               //이미지 추가해보기
