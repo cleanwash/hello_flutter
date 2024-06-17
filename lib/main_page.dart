@@ -65,6 +65,14 @@ class _MainPageState extends State<MainPage> {
                 print(text);
               },
             ),
+            //이미지 추가해보기
+            Image.network(
+                width: 100,
+                height: 100,
+                fit: BoxFit.cover,
+                'https://cdn.huffingtonpost.kr/news/photo/201505/4467_7195.jpeg'),
+            Image.asset('assets/pic.jpg',
+                width: 100, height: 100, fit: BoxFit.cover),
           ],
         ),
       ),
