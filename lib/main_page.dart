@@ -30,6 +30,9 @@ class _MainPageState extends State<MainPage> {
               width: 100,
               height: 100,
             ),
+            SizedBox(
+                height:
+                    50), //단순하게 size를 가져가는 것이라면, container 보단 sizedbox가 낫다, child 속성도 가지고 있다
             Text(
               '숫자',
               style: TextStyle(
@@ -77,6 +80,7 @@ class _MainPageState extends State<MainPage> {
                 height: 100,
                 fit: BoxFit.cover,
                 'https://cdn.huffingtonpost.kr/news/photo/201505/4467_7195.jpeg'),
+            //sizedbox는 색깔이 아닌, 크기만 저장을 할때 사용을 주로 한다.
             Container(
               color: Colors.red,
               width: 120,
