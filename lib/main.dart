@@ -13,8 +13,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black),
+        //useMaterial3 속성을 false로 바뀌면, 화면 theme 색상이 변경된다.
+        useMaterial3: false,
       ),
       home: const MainPage(),
     );
