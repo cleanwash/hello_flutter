@@ -6,6 +6,9 @@ class MainPage extends StatefulWidget {
   @override
   State<MainPage> createState() => _MainPageState();
 }
+//hot reload vs hot restart
+//hot reload: Widget build 안 쪽에서, 내용을 수정할 때, 바로바로 변경이 가능하다.
+//hot restart: 바깥에, int number 같이 변수들은 hot reload가 안됨 -> restart 버튼 클릭
 
 class _MainPageState extends State<MainPage> {
   int number = 0;
