@@ -67,14 +67,25 @@ class _MainPageState extends State<MainPage> {
                 child: Text('OuntLined Button'),
               ),
               //TextField 꾸미기 속성
-              TextField(
-                decoration: InputDecoration(
-                  labelText: '글자',
-                  border: OutlineInputBorder(),
-                ),
-                onChanged: (text) {
-                  print(text);
-                },
+              Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: '글자',
+                        border: OutlineInputBorder(),
+                      ),
+                      onChanged: (text) {
+                        print(text);
+                      },
+                    ),
+                  ),
+                  Expanded(
+                      flex: 2,
+                      child: ElevatedButton(
+                          onPressed: () {}, child: Text('Login'))),
+                ],
               ),
               //이미지 추가해보기
               Image.network(
